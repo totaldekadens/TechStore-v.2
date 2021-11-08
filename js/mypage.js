@@ -53,40 +53,56 @@ buttonCA.addEventListener("click", e => {
 
     const username = document.getElementById("user").value
     const password = document.getElementById("pw").value
+    const confPassword = document.getElementById("confirmPw").value
     const isValid = validateInputs(username, password)
+    const validPw = validPass(password, confPassword)
+    const inputPwUser = sameInputs(username, password)
     let usernameisfree = true
 
     // Fetching the userlist from local storage
     let userList = localStorage.getItem("users")
 
-        // if the "isValid"-function is false (See the function below)
-        if(!isValid) {
-            alert("Behöver ha fler än 4 tecken")
-            return
-        }
+    // if the "isValid"-function is false (See the function below)
+    if(!isValid) {
+        alert("Du behöver ha fler än 5 tecken")
+        return
+    }
+    
+    if(!inputPwUser) {
+        alert("Användarnamnet och lösenordet kan inte vara samma. Bättre kan du :) ")
+        return
+    }
 
-        // If something is in the userlist, do a parse. Else, leave it empty. 
-        if(userList) {
-            userList = JSON.parse(userList)
-        } else {
-            userList = []
-        }
+    // If something is in the userlist, do a parse. Else, leave it empty. 
+    if(userList) {
+        userList = JSON.parse(userList)
+    } else {
+        userList = []
+    }
 
-        // Comparing if the username you want to create already exists in the list
-        for(let i = 0 ; i < userList.length; i++) {
-            
-            let user = userList[i]
-            
-            if(user.username == username) {
+    // Comparing if the username you want to create already exists in the list
+    for(let i = 0 ; i < userList.length; i++) {
+        
+        let user = userList[i]
+        
+        if(user.username == username) {
 
-                usernameisfree = false
+            usernameisfree = false
 
-                if(!usernameisfree) {
-                    alert("Användarnamnet är upptaget!")
-                    return
-                }
+            if(!usernameisfree) {
+                alert("Användarnamnet är upptaget!")
+                return
             }
-        }   
+        }
+    }   
+
+    // If the password inputs doesnt match:
+    if(!validPw){
+        alert("Lösenorden stämmer inte överrens")
+        return
+    }
+
+    
 
     // If you get through the validation the credentials will be pushed to the userlist
     userList.push({username, password, orders: []})
@@ -103,11 +119,29 @@ buttonCA.addEventListener("click", e => {
 
 // Checking if the inputs have more than 4 characters     
 function validateInputs(username, password) {
-    if(username.length >= 4 && password.length >= 4){
+    if(username.length >= 6 && password.length >= 6){
         return true
     }
         return false
 }
+
+// Checking if the input of passwords are correct
+function validPass(password, confPassword){
+
+    if(password == confPassword) {
+        return true
+    }
+    return false
+}
+// Checking if username and password are the same
+function sameInputs(username, password){
+    if(username == password) {
+        return false
+    }
+    return true
+}
+
+
 
 // Login - process
 

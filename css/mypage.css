@@ -57,10 +57,9 @@ main {
     font-size: 30px;
 }
 
-
 .form {
     width: 400px;
-    height: 400px;
+    height: 420px;
     border-radius: 7px;
     background-color: white;
     margin: 10px; 
