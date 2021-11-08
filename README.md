@@ -23,6 +23,14 @@ _________________________________________
     * Before: The number was on the left side of the cart on its own and had the same size.   
     
 _________________________________________
-
+* Create account - Added some validation
+     * Username and password can't be the same
+     *  Password needs to be confirmed
+     
+     * Before: 
+                  
+                  * Username and password need to be longer than 5 characters.  
+                  * Check if the username has been used before. Username needs to be unique. 
+            
 
 Link to the website: https://totaldekadens.github.io/TechStore-v.2/
