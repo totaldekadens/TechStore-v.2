@@ -172,9 +172,18 @@ h3 {
     margin-top: 17px;
 }
     
+.containerTotalPrice {
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
 .totalPrice {
     margin-top: 20px;
     font-size: 16px;
+}
+
+.totalPrice, h4 {
+    margin-bottom: 10px;
 }
 
 .buttonCompletePurchase {
@@ -217,7 +226,6 @@ h3 {
 .containerOfPreviousOrders {
     display: flex;
     justify-content: left;
-    margin-left: 5px;
     width: 400px;
 }
 
