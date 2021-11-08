@@ -43,12 +43,8 @@ main {
     width: 150px;
 }
 
-.productImg:hover{
-    transform: scale(1.05);
-}
-
 h1 {
- margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 h2,h3 {
@@ -72,7 +68,11 @@ h2,h3 {
 }
 
 .buttonContainer:hover {
-    background-color: rgb(73, 73, 73);
+    box-shadow: 0px 0px 5px #5391fe;
+}
+
+.buttonContainer:active{
+    transform: scale(0.98);
 }
 
 .buttonIcon {
