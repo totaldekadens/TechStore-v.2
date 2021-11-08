@@ -1,0 +1,53 @@
+[
+    {
+        "title": "iPhone X",
+        "description": "Last years phone from Apple with a beautiful all display front.",
+        "image": "iPhoneX.png",
+        "price": 11495
+    },{
+        "title": "One Plus 5",
+        "description": "Sleek and powerful smartphone from One Plus.",
+        "image": "OnePlus5.png",
+        "price": 4995
+    },{
+        "title": "Galaxy S8",
+        "description": "Really cool edge to edge smartphone from Samsung.",
+        "image": "SamsungS8.png",
+        "price": 7990
+    },{
+        "title": "LG V30",
+        "description": "Super nice and beautiful smartphone from LG.",
+        "image": "LGV30.png",
+        "price": 7495
+    },{
+        "title": "iPhone 13",
+        "description": "The beautiful design we all have missed is back from iPhone",
+        "image": "iphone13.png",
+        "price": 9790
+    },{
+        "title": "iPhone 13 Pro",
+        "description": "A smartphone with powerfull A15 Bionic CPU with 5G from iPhone",
+        "image": "iPhone13Pro.png",
+        "price": 12290
+    },{
+        "title": "Galaxy A72",
+        "description": "Middle-class smartphone but feels lika a Premium from Samsung",
+        "image": "samsungGalaxyA72.png",
+        "price": 4990
+    },{
+        "title": "Samsung S22",
+        "description": "The new beautiful flag ship from Samsung",
+        "image": "SamsungS22.png",
+        "price": 10190
+    },{
+        "title": "Redmi Note 10 Pro Max",
+        "description": "A smartphone with 108MP camera you don't won't to miss from Xiaomi.",
+        "image": "RedmiNote10ProMax.png",
+        "price": 3690
+    },{
+        "title": "Moto G Pro",
+        "description": "Smartphone with a pencil and Android One from Motorola",
+        "image": "AMotoGStylus2021.png",
+        "price": 3490
+    }
+]

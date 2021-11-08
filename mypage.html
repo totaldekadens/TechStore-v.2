@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Min sida</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/mypage.css">
+        <script defer type="module" src="./js/mypage.js"></script>
+    </head>
+    <body>
+        <header class="flex">
+            <div class="title white">
+                <a class="white" href="./index.html"><h1>TechStore</h1></a>
+            </div>
+            <div class="cartAndQty flex white">
+                <a href="index.html" class="logOut white hidden">Logga ut</a>
+                <a class="white" href="./mypage.js">
+                    <div class="myPage">
+                        <i class="far fa-user"></i>
+                    </div>
+                </a>
+                <div id="qty">0</div>
+                <a class="white" href="./cart.html"><div class="cart"><i class="fas fa-shopping-cart"></i></div></a>
+            </div>
+        </header>
+        <main>
+            <!-- Login - Window -->
+            <section class="container">
+                <form class="form" id="login">  
+                    <h1 class="h1">Logga in</h1>
+                    <div class="inputGroup">
+                        <input id="inputUserName" type="text" placeholder="Användarnamn" name="Användarnamn" autofocus required> 
+                    </div>
+                    <div class="inputGroup">
+                        <input id="inputPassword" type="password" placeholder="Lösenord" name="Lösenord" required> 
+                    </div>
+                    <button class="button" type="submit">Logga in</button>
+                    <p class="formText">
+                        <a class="noAccountLink" id="linkCreateAccount" href="#" >Inget konto? Skapa ett här</a>
+                    </p>
+                </form>
+                <!-- Create account - Window -->
+
+                <form class="form hidden" id="createAccount">
+                    <h1 class="h1">Skapa konto</h1>
+                    <div class="inputGroup">
+                        <input id="user" type="text" placeholder="Användarnamn" name="Användarnamn" autofocus required> 
+                    </div>
+                    <div class="inputGroup">
+                        <input id="pw" type="password" placeholder="Lösenord" name="Lösenord" required> 
+                    </div>
+                    <button class="buttonCA" type="submit">Skapa konto</button>
+                    <p class="formText">
+                        <a class="noAccountLink" id="linkLogIn" href="#" >Har du redan ett konto? Klicka här</a>
+                    </p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
