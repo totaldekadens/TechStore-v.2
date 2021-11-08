@@ -181,51 +181,54 @@ function loggedIn(){
 
             if(user.username == loggedInUser) {
             
-            
                 for(let j = 0 ; j < userList[i].orders.length ; j++){ 
+
+                    let orders = userList[i].orders[j]
 
                     let containerprevious = document.createElement("div")
                     containerprevious.classList.add("containerprevious")
                     bigBox.appendChild(containerprevious)
 
                     let orderNumber = document.createElement("h3")
-                    orderNumber.innerText = "Order: " + userList[i].orders[j].order
+                    orderNumber.innerText = "Order: " + orders.order
                     orderNumber.classList.add("orderNumber")
                     containerprevious.appendChild(orderNumber)
 
                     let dateOfOrder = document.createElement("h3")
-                    dateOfOrder.innerText = userList[i].orders[j].date
+                    dateOfOrder.innerText = orders.date
                     dateOfOrder.classList.add("dateOfOrder")
                     containerprevious.appendChild(dateOfOrder)
-                
-                    for( let k = 0 ; k < userList[i].orders[j].products.length ; k++ ){
+
+                    for( let k = 0 ; k < userList[i].orders[j].products.cart.length ; k++ ){
+
+                        let cart = userList[i].orders[j].products.cart[k]
 
                         let containerOfPreviousOrders = document.createElement("div")
                         containerOfPreviousOrders.classList.add("containerOfPreviousOrders")
                         bigBox.appendChild(containerOfPreviousOrders)
 
                         let productsOfOrder = document.createElement("div")
-                        productsOfOrder.innerText = userList[i].orders[j].products[k].product.title
+                        productsOfOrder.innerText = cart.product.title
                         productsOfOrder.classList.add("containingProducts")
                         containerOfPreviousOrders.appendChild(productsOfOrder)
 
                         let qtyOfProduct = document.createElement("div")
-                        qtyOfProduct.innerText = userList[i].orders[j].products[k].quantity + " st  x  " + userList[i].orders[j].products[k].product.price + " kr"
+                        qtyOfProduct.innerText = cart.quantity + " st  x  " + cart.product.price + " kr"
                         qtyOfProduct.classList.add("containingProducts")
-                        containerOfPreviousOrders.appendChild(qtyOfProduct)   
-
-                        let containerTotalPrice = document.createElement("div")
-                        containerTotalPrice.classList.add("containerOfPreviousOrders")
-                        bigBox.appendChild(containerTotalPrice)
-                    
-                        let textTotalPrice = document.createElement("h4")
-                        textTotalPrice.classList.add("textTotalPrice")
-                        textTotalPrice.innerText = "Totalt pris: " + userList[i].orders[j].total + " kr"
-                        containerTotalPrice.appendChild(textTotalPrice)  
-
+                        containerOfPreviousOrders.appendChild(qtyOfProduct)  
                     }
-                }       
-            }
+
+                    let containerTotalPrice = document.createElement("div")
+                    containerTotalPrice.classList.add("containerTotalPrice")
+                    bigBox.appendChild(containerTotalPrice)
+                
+                    let textTotalPrice = document.createElement("h4")
+                    textTotalPrice.classList.add("textTotalPrice")
+                    textTotalPrice.innerText = "Totalt pris: " + orders.products.total + " kr"
+                    containerTotalPrice.appendChild(textTotalPrice) 
+
+                }  
+            }   
         }
     }
 }
@@ -316,8 +319,9 @@ function completeTheOrder() {
                 user.orders.push({
                     order: orderNr,
                     date: now,
-                    products: cart,
-                    total: totalSum,
+                    products: {
+                        cart,
+                        total: totalSum},
                 })
 
                 localStorage.setItem("users", JSON.stringify(userList));
