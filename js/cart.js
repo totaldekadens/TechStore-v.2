@@ -80,7 +80,6 @@ function renderCart() {
         phoneModelText.innerText = cartItem.product.title
         div.appendChild(phoneModelText)
 
-
         // Price on phone     
         let priceItem = document.createElement("h3")
         priceItem.innerText = cartItem.product.price + " kr" 
@@ -148,12 +147,13 @@ function renderCart() {
     showCorrectAuthBoxes();    
 }
 
-
+// What will happen when a user is logged in
 function loggedIn(){
     let main = document.getElementsByTagName("main")[0]
     let loggedInUser = localStorage.getItem("loggedInUser");
     let userList = JSON.parse(localStorage.getItem("users"));
 
+    // If the user i logged in:
     if(loggedInUser) {
 
         let sum = 0
@@ -226,7 +226,6 @@ function loggedIn(){
                     textTotalPrice.classList.add("textTotalPrice")
                     textTotalPrice.innerText = "Totalt pris: " + orders.products.total + " kr"
                     containerTotalPrice.appendChild(textTotalPrice) 
-
                 }  
             }   
         }
@@ -248,15 +247,14 @@ function addItem(title) {
     renderCart();
 }
 
-// This function will delete item from the cart list  
+// This function will delete item from the selected product in cart 
 function deleteItem(title) {
-
-    let productToDelete = title;
-
+    
     for (let i = 0; i < cart.length; i++) {
 
+        console.log("hej")
         // comparing the object towards the list. If true:
-        if (productToDelete == cart[i].product.title) {
+        if (title == cart[i].product.title) {
         
             // Deletes the unique item from the list
             if(cart[i].quantity == 1) {
@@ -268,16 +266,11 @@ function deleteItem(title) {
             localStorage.setItem("cart", JSON.stringify(cart)); 
 
             // Calling the function deleteIt and printNrOfElements
-            deleteIt();
+            /* deleteIt(); */
             printNrOfElements();   
+            renderCart();
         }
     } 
-}
-
-function deleteIt() {
-
-    // fetch the updated list from localStorage
-    let cart = JSON.parse(localStorage.getItem("cart"));
     
     // If my cart is empty:
     if (cart == [] || cart == "") {
@@ -291,10 +284,9 @@ function deleteIt() {
         alert("Nu är din kundvagn tom!")
 
         printNrOfElements();
-
     } else { 
-    renderCart(); 
-    }
+        renderCart(); 
+        }
 }
 
 // Clear cart from local storage and clear the website from innecessary information
@@ -305,6 +297,7 @@ function completeTheOrder() {
     let cart = JSON.parse(localStorage.getItem("cart"));
     let totalSum = cart.reduce((sum,item) => sum + item.product.price * item.quantity, 0);
 
+    // If a user is logged in this will store the cart in local storage
     if(loggedInUser) {
 
         for( let i = 0 ; i < userList.length ; i++) {
