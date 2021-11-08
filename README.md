@@ -15,7 +15,7 @@
     
 
 * Totalsumma tillagd på varje order i "mina tidigare beställningar". 
-      * Tidigare: Totalsumma saknades. 
+    * Tidigare: Totalsumma saknades. 
     
 
 
