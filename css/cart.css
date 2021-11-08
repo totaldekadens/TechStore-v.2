@@ -62,7 +62,7 @@ main {
     padding-top: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    height: 270px;
+    height: 400px;                                
     border: 2px solid rgb(74, 122, 197);
     border-radius: 5%;
     background-color: whitesmoke;
@@ -83,24 +83,24 @@ main {
 
 h2 {
     margin: 0px;
-    font-size: 28px;
+    font-size: 40px;                             
 }   
 
 h3 {
     margin: 0px;
-    font-size: 14px; 
+    font-size: 20px; 
 }
 .ajustQty {
     display: flex;
     align-items: center;
-    margin-top: 17px;
-    gap: 5px;
+    margin-top: 25px;                          
+    gap: 10px;                                  
 }
 
 .ajustBoxes {
-    width: 22px;
-    height: 22px;
-    font-size: 14px;
+    width: 35px;                                
+    height: 35px;                                
+    font-size: 20px;                              
     border-radius: 5px;
     background-color: white;
     border: 1px solid rgb(233, 232, 232);
@@ -130,7 +130,7 @@ h3 {
 
 .totalPrice {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 20px;           
 }
 
 .totalPrice, h4 {
@@ -138,20 +138,20 @@ h3 {
 }
 
 .buttonCompletePurchase {
-    width: 200px;
-    height: 40px;
+    width: 300px;                  
+    height: 60px;                   
     background-color: #5391fe;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     display: flex;
-    font-size: 16px;
+    font-size: 25px;                   
     margin-top: 25px;
     color: white;
 }
 
 .buttonCompletePurchase:hover {
-    background-color: rgb(73, 73, 73);
+    box-shadow: 0px 0px 5px #5391fe;
 }
 
 .buttonCompletePurchase:active {
@@ -160,7 +160,7 @@ h3 {
 
 .divComplete {
     margin-right: 20px;
-    font-size: 16px;
+    font-size: 25px;                  
 }
 
 .hidden {
@@ -186,7 +186,6 @@ h3 {
     width: 400px;
     margin-top: 20px;
     margin-bottom: 5px;
-
 }
 
 .mypreOrders{
@@ -218,6 +217,46 @@ h3 {
     font-size: 12px;
 }
 
+@media screen and (max-width: 1600px) {
+
+.containerAddedItem {
+    height: 270px;
+}
+
+h2 {
+    font-size: 28px;
+}   
+
+h3 {
+    font-size: 14px; 
+}
+
+.ajustQty {
+    margin-top: 17px;
+    gap: 5px;
+}
+
+.ajustBoxes {
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+}
+
+.totalPrice {
+    font-size: 16px;
+}
+
+.buttonCompletePurchase {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.divComplete {
+    font-size: 16px;
+}
+
+}
 @media screen and (max-width: 600px) {
 
 .containerOfPreviousOrders {
