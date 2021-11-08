@@ -44,8 +44,20 @@ header {
 }
 
 #qty {
-    margin-right: 0px;
-    font-size: 40px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:25px;
+    height: 25px;
+    right: 13px;
+    top:8px;
+    font-size: 14px;
+    font-weight: 600;
+    color:black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
 }
 
 .cart {
@@ -73,7 +85,11 @@ header {
 }
 
 #qty {
-    font-size: 35px;
+    width:22px;
+    height: 22px;
+    right:15px;
+    top:10px;
+    font-size: 10px;
 }
 
 .cart {
@@ -85,11 +101,11 @@ header {
 @media screen and (max-width: 520px) {
 
 .cartAndQty {
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 #qty {
-    font-size: 20px;
+    top:6px;
 }
     
 .title {
@@ -102,10 +118,6 @@ header {
     margin-right: 10px;
 }  
     
-.cart {
-    font-size: 20px;
-} 
-    
 .logOut {
     font-size: 15px;
     margin-right: 0px;
@@ -115,32 +127,14 @@ header {
 
 @media screen and (max-width: 480px) {
 
-.cartAndQty {
+ .cartAndQty {
     gap: 5px;
-}
-
-.title {
-    font-size: 15px;
-    margin-left: 15px;
-} 
-
-.myPage {
-    font-size: 20px;
-    margin-right: 10px;
+    margin-right: 22px;
 }
 
 #qty {
-    font-size: 20px;
-}
-
-.cart {
-    font-size: 20px;
-
-} 
-
-.logOut {
-    font-size: 11px;
-    margin-right: 0px;
+    top:5px;
+    right: 5px;
 }
 
 }
@@ -148,7 +142,7 @@ header {
 @media screen and (max-width: 320px) {
 
 .cartAndQty {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .title {
@@ -163,7 +157,11 @@ header {
 }
 
 #qty {
-    font-size: 20px;
+    top:6px;
+    right: 5px;
+    width:18px;
+    height: 18px;
+    font-size: 8px;
 }
 
 .cart {
