@@ -1,23 +1,23 @@
 # TechStore
 
-**Förbättringar:**
+**Improvements:**
 
-* Inloggad användares användarnamn syns tydligt på hemsidan.
-    * Tidigare: Namnet på inloggad användare syntes ej någonstans på hemsidan, bara att man var inloggad.    
-
-
-* Man kan ändra antal på produkten i kundvagnen
-    * Tidigare: Man kunde ta bort antal på produkten, men inte lägga till. 
+* Logged in user's username is visible on the website.
+    * Previously: The name of the logged in user did not appear anywhere on the website, except in an alert that welcomed the user at login.   
 
 
-* Bekräftelse för vilken produkt man precis lagt till i kundvagnen. Denna punkt skall vidareutvecklas. 
-    * Tidigare: Ingen bekräftelse.  
+* You can change the quantity of the product in the cart
+    * Previosly: You could delete numbers on the product, but not add. 
+
+
+* Confirmation for which product you just added to the shopping cart. This one needs to be further developed.
+    * Previosly: No confirmation at all.   
     
 
-* Totalsumma tillagd på varje order i "mina tidigare beställningar". 
-    * Tidigare: Totalsumma saknades. 
+* Total price added to each order in "mina tidigare beställningar". 
+    * Previosly: Total price was not added. 
     
 
 
 
-Länk till hemsida: https://totaldekadens.github.io/TechStore-v.2/
+Link to the website: https://totaldekadens.github.io/TechStore-v.2/
