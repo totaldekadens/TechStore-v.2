@@ -10,3 +10,7 @@ Förbättringar:
 
 * Bekräftelse för vilken produkt man precis lagt till i kundvagnen. Denna punkt skall vidareutvecklas. 
     * Tidigare: Ingen bekräftelse.   
+
+
+
+Länk till hemsida: https://totaldekadens.github.io/TechStore-v.2/
