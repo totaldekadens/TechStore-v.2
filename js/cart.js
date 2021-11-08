@@ -17,6 +17,7 @@ function printNrOfElements() {
     let totalSum = cart.reduce((sum,item) => sum + item.quantity, 0);
 
     numberHeader.innerText = totalSum
+
 }
 
 // Adding the products to webpage
@@ -243,6 +244,9 @@ function addItem(title) {
         }
         localStorage.setItem("cart", JSON.stringify(cart)); 
     }
+
+    
+   
     printNrOfElements();
     renderCart();
 }
