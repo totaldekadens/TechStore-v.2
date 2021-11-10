@@ -94,12 +94,12 @@ h3 {
     display: flex;
     align-items: center;
     margin-top: 25px;                          
-    gap: 10px;                                  
+    gap: 15px;                                  
 }
 
 .ajustBoxes {
-    width: 35px;                                
-    height: 35px;                                
+    width: 40px;                                
+    height: 40px;                                
     font-size: 20px;                              
     border-radius: 5px;
     background-color: white;
@@ -232,13 +232,13 @@ h3 {
 }
 
 .ajustQty {
-    margin-top: 17px;
-    gap: 5px;
+    margin-top: 14px;
+    gap: 10px;
 }
 
 .ajustBoxes {
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     font-size: 14px;
 }
 
