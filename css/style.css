@@ -153,6 +153,10 @@ h1 {
     text-align: center;
 }
 
+.phoneModelContainer{
+    max-height: 600px;
+}
+
 .imageContainer {
     height: 360px;
 }
