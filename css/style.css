@@ -154,7 +154,7 @@ h1 {
 }
 
 .imageContainer {
-    height: 320px;
+    height: 360px;
 }
 
 .productImg {
@@ -165,13 +165,16 @@ h1 {
     top: 62px;
 }
 
-.phoneModelContainer {
-    margin-top: 20px;
-}
-
 .buttonContainer {
     width: 220px;
 }
+}
+
+@media screen and (max-width: 420px){
+.imageContainer {
+    height: 320px;
+}
+
 }
 
 @media screen and (max-width: 320px) {
