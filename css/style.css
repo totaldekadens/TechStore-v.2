@@ -97,7 +97,7 @@ h2,h3 {
 @media screen and (max-width: 1600px) {
 
 .phoneModelContainer{
-    min-height: 520px;
+    min-height: 550px;
 }    
 
 h2,h3 {
@@ -115,33 +115,25 @@ h2,h3 {
 h2, h3 {
    font-size: 16px; 
 }
-
-.buttonContainer {
-
-    width: 320px;
-    height: 50px;
-    font-size: 22px;
-    border-radius: 10px;
-}
 }
 
 @media screen and (min-width: 450px) and (max-width: 1100px) and (min-height: 1000px) {
 
-    .phoneModelContainer{
-        margin-top: 60px;
-    }
+.phoneModelContainer{
+    margin-top: 60px;
+}
 
-    h2, h3 {
-       font-size: 18px; 
-    }
-    
-    .buttonContainer {
-        width: 420px;
-        height: 60px;
-        font-size: 25px;
-        border-radius: 10px;
-    }
-    }
+h2, h3 {
+    font-size: 18px; 
+}
+
+.buttonContainer {
+    width: 420px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+}
 
 }
 @media screen and (max-width: 520px) {   
@@ -162,12 +154,11 @@ h1 {
 }
 
 .imageContainer {
-    padding-right: 10px;
-    padding-left: 10px;
+    height: 320px;
 }
 
- .productImg {
-    width: 100%;
+.productImg {
+    height: 100%;
 } 
 
 .containUser {
@@ -178,6 +169,9 @@ h1 {
     margin-top: 20px;
 }
 
+.buttonContainer {
+    width: 220px;
+}
 }
 
 @media screen and (max-width: 320px) {
@@ -185,4 +179,9 @@ h1 {
 .containUser {
     top: 58px;
 }
+
+.imageContainer {
+    height: 250px;
+}
+
 }
